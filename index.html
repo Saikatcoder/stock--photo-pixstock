@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en" data-theme ="light">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://play-lh.googleusercontent.com/KtFwMsqVzBBpTFc8vR5SZRCNBvqknlWurnzTRl4J-2kdZhoM04LjklX9Vh8pl-fYfpU" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+     <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap" rel="stylesheet">
+     -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Playwrite+FR+Moderne:wght@100..400&family=Questrial&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5e155b5308.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="module" src="./js/theme.js"></script>
+    <script src="/stock--photo-pixstock/js/app.js" type="module"></script>
+    <script src="/stock--photo-pixstock/js/global.js" type="module"></script>
+    <script src="/stock--photo-pixstock//js/search.js" type="module"></script>
+    <title>Stock photo media</title>
+  </head>
+  <body>
+   <!-- header content -->
+   <header class="top-app-bar" data-header>
+    <button class="icon-btn  nav-troggler-btn" aria-label="Open menu" data-new-toggler data-ripple>
+      <i class="fa-solid fa-bars"></i>
+     
+      <div class="state-layer"></div>
+    </button>
+    <a href="/" class="logo">Pixstock</a>
+    <div class="search-view" data-search-view>
+      <div class="search-bar">
+        <button class="icon-btn search-open" id="cross" aria-label="Close search" data-search-toggler data-ripple>
+          <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+          <div class="state-layer"></div>
+        </button>
+        <div class="input-wrapper">
+          <i class="fa-solid fa-magnifying-glass leading-icon" aria-hidden="true"></i>
+          <input type="search" name="search" placeholder="Search...." class="input-field body-large"
+           autocomplete="off" data-search-field id="searchfield">
+        </div>
+
+        <button class="icon-btn" aria-label="Clear search" data-search-clear data-ripple>
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+          <div class="state-layer"></div>
+        </button>
+
+        <button class="icon-btn search-btn " id="searchopen" aria-label="Submit search" data-search-toggler data-ripple data-search-btn>
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <div class="state-layer"></div>
+        </button>
+
+        <div class="state-layer"></div>
+      </div>
+
+
+      <div class="search-view-content">
+        <div class="btn-group" id="searchelement" data-segment="search">
+          <button class="btn-segment selected"  data-ripple data-segment-btn data-segment-value="photos">
+            <i class="fa-regular fa-image video-img fa-solid" aria-hidden="true"></i>
+            <span class="label-large text">Photos</span>
+          </button>
+          <button class="btn-segment "  data-ripple data-segment-btn data-segment-value="videos">
+            <i class="fa-solid fa-video video-img" aria-hidden="true"></i>
+            <span class="label-large text">Videos</span>
+            <div class="state-layer"></div>
+          </button>
+
+        </div>
+        <div class="divider"></div>
+        <div class="list" id="searchList" data-search-list>
+        </div>
+      </div>
+    </div> 
+
+    <button class="icon-btn search-open" aria-label ="Open search" data-search-toggler data-ripple>
+      <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+      <div class="state-layer"></div>
+    </button>
+    
+    <button class="icon-btn theme-btn" aria-label="Switch theme" data-theme-toggler data-ripple>
+      <i class="fa-regular fa-moon dark" aria-hidden="true"></i>
+      <i class="fa-solid fa-sun light" aria-hidden="true"></i>
+      <div class="state-layer"></div>
+    </button>
+
+   </header>
+
+   <!-- navigation -->
+   <nav class="navigation" data-navigation>
+    <div class="navigation-header">
+      <button class="icon-btn  nav-troggler-btn" aria-label="close-menu" data-ripple data-nav-toggler>
+        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+        <div class="state-layer"></div>
+      </button>
+      <a href="/" class="logo">Pixstock</a>
+    </div>
+
+    <ul class="drawer-list">
+      <li class="drawer-item">
+        <a href="/index.html" class="drawer-link active" data-drawer-link>
+          <i class="fa-solid fa-house" aria-hidden="true"></i>
+        <span class="label-large">Home</span>
+        <div class="state-layer"></div>
+        </a>
+        </li>
+
+      <li class="drawer-item">
+        <a href="/stock--photo-pixstock/pages/photos/photos.html" class="drawer-link" data-drawer-link>
+          <i class="fa-solid fa-image" aria-hidden="true"></i>
+        <span class="label-large">Photos</span>
+        <div class="state-layer"></div>
+        </a>
+        </li>
+
+      <li class="drawer-item">
+        <a href="../videos/videos.html" class="drawer-link" data-drawer-link>
+          <i class="fa-solid fa-video" aria-hidden="true"></i>
+        <span class="label-large">Videos</span>
+        <div class="state-layer"></div>
+        </a>
+        </li>
+
+      <li class="drawer-item">
+          <a href="../collections/collection.html" class="drawer-link " data-drawer-link>
+            <i class="fa-solid fa-list" aria-hidden="true"></i>
+          <span class="label-large">Collection</span>
+          <div class="state-layer"></div>
+          </a>
+        </li>
+
+       <li class="drawer-item">
+            <a href="../favorite/favorite.html" class="drawer-link " data-drawer-link>
+              <i class="fa-regular fa-heart" aria-hidden="true"></i>
+            <span class="label-large">Favorite</span>
+            <div class="state-layer"></div>
+            </a>
+        </li>
+
+    </ul>
+
+   </nav>
+   
+   <div class="scrim nav-troggler-btn" data-toggle-btn  data-ripple></div>
+
+   <div class="main">
+    <article>
+      <!-- banner section -->
+      <section class="banner" aria-label="Banner">
+
+        <div class="banner-card primary">
+          <div class="card-content">
+            <h3 class="headline-medium card-title">
+              High quality stock photo for free
+            </h3>
+            <p class="body-large card-text">
+              Explore our exceptional collection of high-quality stock photos.
+            </p>
+            <a href="./pages/photos/photos.html" class="btn btn-primary" data-ripple>
+              <div class="label-large text">Explore Now</div>
+            </a>
+          </div>
+
+          <div class="card-grid">
+             <div class="card-banner" style="grid-area: b1;background-image: url(./assets/images/photo-banner-1.jpg);">
+              </div>
+
+              <div class="card-banner" style="grid-area: b2;background-image: url(./assets/images/photo-banner-2.jpg);">
+                </div>
+               
+              <div class="card-banner" style="grid-area: b3;background-image: url(./assets/images/photo-banner-3.jpg);">
+                </div>
+
+              <div class="card-banner" style="grid-area: b4;background-image: url(./assets/images/photo-banner-4.jpg);">
+              </div>
+
+              <div class="card-banner" style="grid-area: b5;background-image: url(./assets/images/photo-banner-5.jpg);">
+                </div>
+              <div class="card-banner" style="grid-area: b6;background-image: url(./assets/images/photo-banner-6.jpg);">
+                </div>
+          </div>
+
+        </div>
+
+        <div class="banner-card secondary">
+          <div class="card-content">
+            <h3 class="headline-medium card-title">
+             Top rated stock videos for free
+            </h3>
+            <p class="body-large card-text">
+             Our curated selection videos is sure to inspire and captivate
+            </p>
+            <a href="./pages/videos/videos.html" class="btn btn-secondary" data-ripple>
+              <div class="label-large text">Explore Now</div>
+            </a>
+          </div>
+
+          <div class="card-grid">
+             <div class="card-banner" style="grid-area: b1;">
+              <video src="./assets/videos/video-banner-1.mp4" class="video" width="360" height="420" loading = "lazy" autoplay muted loop></video>
+                </div>
+
+              <div class="card-banner" style="grid-area: b2;">
+                 <video src="./assets/videos/video-banner-2.mp4" class="video" width="360" height="640" loading = "lazy" autoplay muted loop></video>
+                 </div>
+              
+  
+               <div class="card-banner" style="grid-area: b3;">
+                   <video src="./assets/videos/video-banner-3.mp4" class="video" width="480" height="360" loading = "lazy" autoplay muted loop></video>
+                  </div>
+  
+                <div class="card-banner" style="grid-area: b4;">
+                     <video src="./assets/videos/video-banner-4.mp4" class="video" width="360" height="640" loading = "lazy" autoplay muted loop></video>
+                  </div>
+    
+                <div class="card-banner" style="grid-area: b5;">
+                       <video src="./assets/videos/video-banner-5.mp4" class="video" width="640" height="360" loading = "lazy" autoplay muted loop></video>
+                  </div>
+        
+                <div class="card-banner" style="grid-area: b6;">
+                         <video src="./assets/videos/video-banner-6.mp4" class="video" width="480" height="360" loading = "lazy" autoplay muted loop></video>
+                  </div>
+          </div>
+
+        </div>
+
+        <div class="banner-card three">
+          <div class="card-content">
+            <h3 class="headline-medium card-title">
+             Best collection with best medias
+            </h3>
+            <p class="body-large card-text">
+            Discover a treasure trove of stunning images, captivate videos
+            </p>
+            <a href="./pages/collections/collection.html" class="btn btn-three" data-ripple>
+              <div class="label-large text">Explore Now</div>
+            </a>
+          </div>
+
+          <div class="card-grid">
+            
+            <div class="card-banner" style="grid-area: b1;background-image: url(./assets/images/collection-banner-1.jpg);">
+            </div>
+
+             <div class="card-banner" style="grid-area: b2;">
+              <video src="./assets/videos/collection-banner-2.mp4" class="video" width="360" height="420" loading = "lazy" autoplay muted loop></video>
+              </div>
+
+
+             
+              <div class="card-banner" style="grid-area: b3;background-image: url(./assets/images/collection-banner-3.jpg);">
+              </div>
+               
+            <div class="card-banner" style="grid-area: b4;background-image: url(./assets/images/collection-banner-4.jpg);">
+            </div>
+
+
+            <div class="card-banner" style="grid-area: b5;">
+              <video src="./assets/videos/collection-banner-5.mp4" class="video" width="640" height="420" loading = "lazy" autoplay muted loop></video>
+              </div>
+
+              <div class="card-banner" style="grid-area: b6;">
+                <video src="./assets/videos/collection-banner-6.mp4" class="video" width="640" height="338" loading = "lazy" autoplay muted loop></video>
+                </div>
+            
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- featured photo -->
+      <section class="section featured-photo" aria-labelledby="featured-label">
+        <div class="container">
+          <h2 class="title-large section-title" id="featured-label">
+            Featured photos
+          </h2>
+          <div class="media-grid" data-photo-grid>
+            <!-- <div class="column">
+            <div class="card grid-item " data-ripple>
+              <figure class="card-banner" style="width: 160; height: 121;">
+                <img src="./public/assets/images/card-media-1.jpg" alt="" class="img-cover">
+              </figure>
+              <div class="card-content">
+                <button class="icon-btn small" aria-label="Add to favorite" data-ripple data-toggle-btn>
+                  <i class="fa-solid fa-heart"></i>
+                  <div class="state-layer"></div>
+                </button>
+              </div>
+
+              <a href="#" class="statelayer"></a>
+            </div>
+
+            <div class="card grid-item " data-ripple>
+              <figure class="card-banner" style="width: 160; height: 121;">
+                <img src="./public/assets/images/card-media-1.jpg" alt="" class="img-cover">
+              </figure>
+              <div class="card-content">
+                <button class="icon-btn small" aria-label="Add to favorite" data-ripple data-toggle-btn>
+                  <i class="fa-solid fa-heart"></i>
+                  <div class="state-layer"></div>
+                </button>
+              </div>
+
+              <a href="#" class="statelayer"></a>
+            </div>
+
+            <div class="card grid-item " data-ripple>
+              <figure class="card-banner" style="width: 160; height: 121;">
+                <img src="./public/assets/images/card-media-1.jpg" alt="" class="img-cover">
+              </figure>
+              <div class="card-content">
+                <button class="icon-btn small" aria-label="Add to favorite" data-ripple data-toggle-btn>
+                  <i class="fa-solid fa-heart"></i>
+                  <div class="state-layer"></div>
+                </button>
+              </div>
+
+              <a href="#" class="statelayer"></a>
+            </div>
+
+            </div>
+
+            <div class="column">
+              <div class="card grid-item " data-ripple>
+                <figure class="card-banner" style="width: 160; height: 121;">
+                  <img src="./public/assets/images/card-media-1.jpg" alt="" class="img-cover">
+                </figure>
+                <div class="card-content">
+                  <button class="icon-btn small" aria-label="Add to favorite" data-ripple data-toggle-btn>
+                    <i class="fa-solid fa-heart"></i>
+                    <div class="state-layer"></div>
+                  </button>
+                </div>
+  
+                <a href="#" class="statelayer"></a>
+              </div>
+  
+              <div class="card grid-item " data-ripple>
+                <figure class="card-banner" style="width: 160; height: 121;">
+                  <img src="./public/assets/images/card-media-1.jpg" alt="" class="img-cover">
+                </figure>
+                <div class="card-content">
+                  <button class="icon-btn small" aria-label="Add to favorite" data-ripple data-toggle-btn>
+                    <i class="fa-solid fa-heart"></i>
+                    <div class="state-layer"></div>
+                  </button>
+                </div>
+                <a href="#" class="statelayer"></a>
+              </div>
+  
+              <div class="card grid-item " data-ripple>
+                <figure class="card-banner" style="width: 160; height: 121;">
+                  <img src="./public/assets/images/card-media-1.jpg" alt="" class="img-cover" width="" height="" loading="lazy">
+                </figure>
+                <div class="card-content">
+                  <button class="icon-btn small" aria-label="Add to favorite" data-ripple data-toggle-btn>
+                    <i class="fa-solid fa-heart"></i>
+                    <div class="state-layer"></div>
+                  </button>
+                </div>
+  
+                <a href="#" class="statelayer"></a>
+              </div>
+  
+              </div> -->
+          </div>
+
+          <div class="overlay-btn">
+            <a href="./pages/photos/photos.html" class="btn btn-primary">
+              <span class="label-large text">Explore more</span>
+              <div class="state-layer"></div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+
+      <!--featured Video section  -->
+      <section class="section popular-video" aria-labelledby="popular-video-label">
+        <div class="container">
+          <h2 class="title-large section-title" id="popular-video-label">
+          Popular Videos
+          </h2>
+          <div class="media-grid video-grid" data-video-grid></div>
+          
+          <div class="overlay-btn">
+            <a href="./pages/videos/videos.html" class="btn btn-primary">
+              <span class="label-large text">Explore more</span>
+              <div class="state-layer"></div>
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- collection section -->
+      <section class="section collection" aria-labelledby="collection-label">
+        <div class="container">
+        <h2 class="title large section-title" id="collection-label">
+          Featured Collection
+        </h2>
+        <div class="collection-grid" data-collection-grid>
+          <div class="grid-card list-item two-line" data-ripplediv></div>
+        <a href="./pages/collections/collection.html" class="btn btn-primary" data-ripple>
+          <span class="label-large text">More Collection</span>
+          <div class="state-layer"></div>
+        </a>
+        </div>
+      </section>
+
+    </article>
+   </div>
+
+   <!-- footer section -->
+   <footer class="footer">
+    <div class="container">
+      <div class="footer-card">
+        <div class="col">
+          <a href="/" class="logo">Pixstock</a>
+          <p class="text body-large">
+            Pixstock is a stock photo app developed by <span class="color-primary">Saikat Dutta </span>and all photo and videos are provide by <a href="https://pexels.com" class="color-primary" target="_blank">&#169;pexels</a>
+          </p>
+          <p class="color-primary label-small">&#169;Saikat Dutta    <span>(21/07/2024)</span></p>
+          
+        </div>
+        <div class="col">
+          <p class="title label-medium">Follw us on</p>
+          <div class="social-list">
+            <a href="https://github.com/Saikatcoder" class="label-small color-primary">Github</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </body>
+</html>
+
