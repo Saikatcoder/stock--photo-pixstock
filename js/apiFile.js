@@ -1,5 +1,5 @@
 // import api 
-import{urlEncode} from './utils/urlEncode.js'
+import{urlEncode} from '../js/utils/urlEncode.js'
 const API_KEY = "jOc595i26VWtpuE0p79SAoyMykwIpkzffEpXUzsUAoiHakBonRiRrWdf";
 const headers = new Headers()
 

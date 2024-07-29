@@ -67,5 +67,25 @@ client.photos.detail(photoId, data=>{
         }, {
             duration : 400 , fill : "forwards"
         });
-    })
+        if(alt){
+            client.photos.search({query : alt, page :1, per_page:30},data=>{
+                loadSimilarPhoto(data)
+            })
+        }else{
+            loader.style.display ="none";
+            photoGrid.innerHTML = "<p>No Similar photo found Sorry..</p>"
+        }
+    });
 })
+
+// load semiliar photos
+    const photoGrid = document.querySelector("[data-photo-grid]");
+    const PhotoGridElement = gridInit(photoGrid);
+    const loader = document.querySelector("[data-loder]");
+ function loadSimilarPhoto (data){
+    data.photos.forEach(photo =>{
+        const card = photoCard(photo);
+        updateGrid(card, PhotoGridElement.columnsHeight, PhotoGridElement.$columns);
+        loader.style.display = "none";
+    });
+}

@@ -15,8 +15,8 @@ export function collectionCard(collection){
       ${title}
     </h3>
     <p class="body-medium label">${media_count}</p>
-    <a href="${root}?collectionId=${id}" title="${title}" class="state-layer"></a>
-  </div>
+    </div>
+    <a href="${root}/pages/collections/collection_detail.html?collectionId=${id}&title=${title}" class="state-layer"></a>
     `;
     ripple(card);
     return(card);

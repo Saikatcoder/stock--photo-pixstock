@@ -20,19 +20,37 @@ export function videoCard(video){
     const favoriteObj = JSON.parse(window.localStorage.getItem("favorite"));
 
     card.innerHTML =`    
-    <div class="card-banner" style="width: ${width}; height: ${height};">
-    <video src="${link}" class="img-cover" muted loop preload="none" data-video type="${file_type}" poster="${image}"></video>
+           
+    <div class="card-banner" style="--width: ${width}; --height: ${height}">
+    <video poster="${image}" muted loop preload="none" class="img-cover" data-video>
+      <source
+        src="${link}"
+        type="${file_type}"
+      />
+    </video>
   </div>
+
   <div class="card-content">
-  <button class="icon-btn small ${favoriteObj.videos[id] ? "active" : ""}" aria-label="Add to favorite" data-ripple data-favorite-btn>
-  <i class="fa-solid fa-heart"></i>
-  <div class="state-layer"></div>
-</button>
+    <button
+    class="icon-btn small ${favoriteObj.videos[id] ? "active" : ""}"
+    aria-label="Add to favorite"
+    data-ripple
+    data-favorite-btn
+    >
+    <i class="fa-solid fa-heart aria-hidden="true"
+      ></i>
+
+      <div class="state-layer"></div>
+    </button>
   </div>
-  <span class="card-badge">
-    <i class="fa-solid fa-play" aria-label="true"></i>
+
+  <span class="card-badge" data-card-badge>
+  <i class="fa-solid fa-play aria-hidden="true"
+      ></i>
   </span>
-  <a href="${root}/stock--photo-pixstock/pages/videos/video_detail.html?id=${id}" class="statelayer"></a>
+  
+
+  <a href="${root}/pages/videos/video_detail.html?id=${id}" class="state-layer"></a>
     `;
     const rippleElems = [card, ...card.querySelectorAll("[data-ripple]")];
     rippleElems.forEach(rippleElem => ripple(rippleElem));
@@ -41,3 +59,5 @@ export function videoCard(video){
     hoverplay(card)
     return card;
 }
+
+

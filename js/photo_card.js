@@ -25,7 +25,7 @@ export function photoCard(photo){
     </button>
   </div>
 
-  <a href="${root}/stock--photo-pixstock/pages/photos/photo_detail.html?id=${id}" class="state-layer"></a>`;
+  <a href="${root}/pages/photos/photo_detail.html?id=${id}" class="state-layer"></a>`;
   const cardBanner = card.querySelector("img");
   cardBanner.style.opacity = 0;
   cardBanner.addEventListener("load", function(){

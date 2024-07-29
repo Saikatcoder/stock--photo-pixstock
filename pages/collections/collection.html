@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en" data-theme ="light">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://play-lh.googleusercontent.com/KtFwMsqVzBBpTFc8vR5SZRCNBvqknlWurnzTRl4J-2kdZhoM04LjklX9Vh8pl-fYfpU" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Playwrite+FR+Moderne:wght@100..400&family=Questrial&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5e155b5308.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="module" src="/js/theme.js"></script>
+    <script src="/js/global.js" type="module"></script>
+    <script src="/js/search.js" type="module"></script>
+    <script src="/pages/collections/collection.js" type="module"></script>
+    <title>Featured collections -Pixstock</title>
+  </head>
+  <body>
+
+   <!-- header content -->
+   <header class="top-app-bar" data-header>
+    <button class="icon-btn  nav-troggler-btn" aria-label="Open menu" data-new-toggler data-ripple>
+      <i class="fa-solid fa-bars"></i>
+     
+      <div class="state-layer"></div>
+    </button>
+    <a href="/" class="logo">Pixstock</a>
+    <div class="search-view " data-search-view>
+      <div class="search-bar">
+        <button class="icon-btn search-open" id="cross" aria-label="Close search" data-search-toggler data-ripple>
+          <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+          <div class="state-layer"></div>
+        </button>
+        <div class="input-wrapper">
+          <i class="fa-solid fa-magnifying-glass leading-icon" aria-hidden="true"></i>
+          <input type="search" name="search" placeholder="Search...." class="input-field body-large" autocomplete="off" data-search-field id="searchfield">
+        </div>
+
+        <button class="icon-btn" aria-label="Clear search" data-search-clear data-ripple>
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+          <div class="state-layer"></div>
+        </button>
+
+        <button class="icon-btn search-btn " id="searchopen" aria-label="Submit search" data-search-toggler data-ripple data-search-btn>
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <div class="state-layer"></div>
+        </button>
+
+        <div class="state-layer"></div>
+      </div>
+
+
+      <div class="search-view-content">
+        <div class="btn-group" id="searchelement" data-segment="search">
+          <button class="btn-segment selected"  data-ripple data-segment-btn data-segment-value="photos">
+            <i class="fa-regular fa-image video-img fa-solid" aria-hidden="true"></i>
+            <span class="label-large text">Photos</span>
+          </button>
+          <button class="btn-segment "  data-ripple data-segment-btn data-segment-value="videos">
+            <i class="fa-solid fa-video video-img" aria-hidden="true"></i>
+            <span class="label-large text">Videos</span>
+            <div class="state-layer"></div>
+          </button>
+
+        </div>
+        <div class="divider"></div>
+        <div class="list" id="searchList" data-search-list>
+         
+
+        </div>
+
+      </div>
+    </div> 
+
+    <button class="icon-btn search-open" aria-label ="Open search" data-search-toggler data-ripple>
+      <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+      <div class="state-layer"></div>
+    </button>
+    
+    <button class="icon-btn theme-btn" aria-label="Switch theme" data-theme-toggler data-ripple>
+      <i class="fa-regular fa-moon dark" aria-hidden="true"></i>
+      <i class="fa-solid fa-sun light" aria-hidden="true"></i>
+      <div class="state-layer"></div>
+    </button>
+
+   </header>
+
+  
+   <!-- navigaction -->
+   <nav class="navigation " data-navigation>
+    <div class="navigation-header">
+      <button class="icon-btn  nav-troggler-btn" aria-label="close-menu" data-ripple data-nav-toggler>
+        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+        <div class="state-layer"></div>
+      </button>
+      <a href="/" class="logo">Pixstock</a>
+    </div>
+
+    <ul class="drawer-list">
+      <li class="drawer-item">
+        <a href="/" class="drawer-link" data-drawer-link>
+          <i class="fa-solid fa-house" aria-hidden="true"></i>
+        <span class="label-large">Home</span>
+        <div class="state-layer"></div>
+        </a>
+        </li>
+
+      <li class="drawer-item">
+        <a href="/pages/photos/photos.html" class="drawer-link" data-drawer-link>
+          <i class="fa-solid fa-image" aria-hidden="true"></i>
+        <span class="label-large">Photos</span>
+        <div class="state-layer"></div>
+        </a>
+        </li>
+
+      <li class="drawer-item">
+        <a href="/pages/videos/videos.html" class="drawer-link" data-drawer-link>
+          <i class="fa-solid fa-video" aria-hidden="true"></i>
+        <span class="label-large">Videos</span>
+        <div class="state-layer"></div>
+        </a>
+        </li>
+
+      <li class="drawer-item">
+          <a href="/pages/collections/collection.html" class="drawer-link active " data-drawer-link>
+            <i class="fa-solid fa-list" aria-hidden="true"></i>
+          <span class="label-large">Collection</span>
+          <div class="state-layer"></div>
+          </a>
+        </li>
+
+       <li class="drawer-item">
+            <a href="/pages/favorite/favorite.html" class="drawer-link " data-drawer-link>
+              <i class="fa-regular fa-heart" aria-hidden="true"></i>
+            <span class="label-large">Favorite</span>
+            <div class="state-layer"></div>
+            </a>
+        </li>
+
+    </ul>
+
+   </nav>
+   
+   <div class="scrim nav-troggler-btn" data-toggle-btn  data-ripple></div>
+
+   <div class="main">
+    <article class="container">
+      <!-- <h2 class="body-large text">App Under development</h2> -->
+    <h2 class="page-title title-large" data-title >Featured collections
+    </h2>
+
+    
+
+    <div class="collection-grid" data-collection-grid></div>
+    <div class="load-more" data-loder  role="progressbar"></div>
+  </article>
+   </div>
+<!-- footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-card">
+      <div class="col">
+        <a href="/" class="logo">Pixstock</a>
+        <p class="text body-large">
+          Pixstock is a stock photo app developed by <span class="color-primary">Saikat Dutta</span>and all photo and videos are provide by <a href="https://pexels.com" class="color-primary" target="_blank">&#169;pexels</a>
+        </p>
+        <p class="color-primary label-small">&#169;Saikat Dutta    <span>(21/07/2024)</span></p>
+        
+      </div>
+      <div class="col">
+        <p class="title label-medium">Follw us on</p>
+        <div class="social-list">
+          <a href="https://github.com/Saikatcoder" class="label-small color-primary">Github</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>
+
