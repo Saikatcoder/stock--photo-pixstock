@@ -2,6 +2,8 @@
 
 PixStock is a stock photo platform where users can browse and download high-quality images using an external API. It provides a seamless experience for users looking for royalty-free images.
 
+🔗 **Live Demo:** [Stock Photo - PixStock](https://stockphotomedia.netlify.app/)
+
 ## 🚀 Features
 - Browse high-resolution stock images
 - Search functionality to find specific photos
